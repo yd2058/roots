@@ -30,7 +30,7 @@
             android:layout_weight="1"
             android:ems="10"
             android:hint="a"
-            android:inputType="number" />
+            android:inputType="numberSigned|numberDecimal" />
 
         <Space
             android:layout_width="0dp"
@@ -44,7 +44,7 @@
             android:layout_weight="1"
             android:ems="10"
             android:hint="b"
-            android:inputType="number" />
+            android:inputType="numberSigned|numberDecimal" />
 
         <Space
             android:layout_width="0dp"
@@ -58,7 +58,7 @@
             android:layout_weight="1"
             android:ems="10"
             android:hint="c"
-            android:inputType="number" />
+            android:inputType="numberSigned|numberDecimal" />
 
         <Space
             android:layout_width="0dp"
@@ -124,7 +124,7 @@
         <Space
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="0.5" />
 
         <TextView
             android:id="@+id/tv"
@@ -135,7 +135,7 @@
         <Space
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="0.5" />
     </LinearLayout>
 
     <Space

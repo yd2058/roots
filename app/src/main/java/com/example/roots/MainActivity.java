@@ -46,13 +46,15 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int source, int good, @Nullable Intent data_back) {
         if (data_back != null) {
-            if(data_back.getIntExtra("resam",0)==2) tv.setText("for a="+data_back.getDoubleExtra("a",0)+", b="+data_back.getDoubleExtra("b",0)+", c="+data_back.getDoubleExtra("c",0)+" results were:"+data_back.getDoubleExtra("x1",0)+", "+data_back.getDoubleExtra("x2",0));
+            if(data_back.getIntExtra("resam",0)==2) tv.setText("for a="+data_back.getDoubleExtra("a",0)+", b="+data_back.getDoubleExtra("b",0)+", c="+data_back.getDoubleExtra("c",0)+" results were: x1 = "+data_back.getDoubleExtra("x1",0)+", x2 = "+data_back.getDoubleExtra("x2",0));
+            else if(data_back.getIntExtra("resam",0)==1) tv.setText("for a="+data_back.getDoubleExtra("a",0)+", b="+data_back.getDoubleExtra("b",0)+", c="+data_back.getDoubleExtra("c",0)+" the result was: x ="+data_back.getDoubleExtra("x1",0));
+            else tv.setText("for a="+data_back.getDoubleExtra("a",0)+", b="+data_back.getDoubleExtra("b",0)+", c="+data_back.getDoubleExtra("c",0)+" there was no result");
         }
     }
     public void rand(View view) {
-        a = ((double)rnd.nextInt(101)+(rnd.nextInt(101)/100));
-        b = ((double)rnd.nextInt(101)+(rnd.nextInt(101)/100));
-        c = ((double)rnd.nextInt(101)+(rnd.nextInt(101)/100));
+        a = ((double)rnd.nextInt(201)-100+(((double)rnd.nextInt(101))/100));
+        b = ((double)rnd.nextInt(201)-100+(((double)rnd.nextInt(101))/100));
+        c = ((double)rnd.nextInt(201)-100+(((double)rnd.nextInt(101))/100));
         tea.setText(a.toString());
         teb.setText(b.toString());
         tec.setText(c.toString());
